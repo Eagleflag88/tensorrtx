@@ -62,7 +62,7 @@ def gen_wts(model, filename):
 
 def main():
     num_classes = 91
-    device = torch.device('cuda')
+    device = torch.device('cpu')
 
     backbone = build_backbone()
 
