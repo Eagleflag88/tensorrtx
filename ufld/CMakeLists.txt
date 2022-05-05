@@ -15,6 +15,13 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 find_package(OpenCV)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
+# cuda
+include_directories(/usr/local/cuda/include)
+link_directories(/usr/local/cuda/lib64)
+# tensorrt
+include_directories(/usr/include/x86_64-linux-gnu/)
+link_directories(/usr/lib/x86_64-linux-gnu/)
+
 add_executable(lane_det ${PROJECT_SOURCE_DIR}/lane_det.cpp)
 target_link_libraries(lane_det nvinfer)
 target_link_libraries(lane_det cudart)
