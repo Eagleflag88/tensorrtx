@@ -409,7 +409,7 @@ int main(int argc, char** argv)
         }
         // cv::imshow("lane_vis",vis);
         // cv::waitKey(0);
-        cv::imwrite("lane_vis",vis);
+        cv::imwrite("lane_vis.jpg",vis);
 
     }
 
